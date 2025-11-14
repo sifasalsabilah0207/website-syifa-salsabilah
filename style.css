@@ -1,0 +1,260 @@
+/* === GAYA DASAR === */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+
+/* === HEADER DAN NAVBAR === */
+.header {
+    background-color: #ff7043;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffe0b2;
+}
+
+/* === LAYOUT UTAMA === */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    flex-wrap: wrap;
+}
+
+/* === KONTEN UTAMA === */
+.konten-utama {
+    flex: 3;
+    min-width: 300px;
+}
+
+.konten-utama h2 {
+    color: #ff7043;
+}
+
+.konten-utama p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+/* Jarak antara beranda dan produk */
+#beranda {
+    scroll-margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+/* === PRODUK === */
+.produk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.produk {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 240px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produk:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.produk img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.produk h3 {
+    color: #ff7043;
+    margin: 0.5rem;
+}
+
+/* === ASIDE / TENTANG SAYA === */
+aside {
+    flex: 1;
+    background: #ffe0b2;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+    color: #ff7043;
+    margin-bottom: 1rem;
+}
+
+aside img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+aside p {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* === KONTAK === */
+.kontak {
+    background: #fff3e0;
+    padding: 2rem 3rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.kontak h2 {
+    color: #ff7043;
+    text-align: center;
+}
+
+.kontak p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.info-kontak {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.info-kontak a {
+    color: #ff7043;
+    text-decoration: none;
+}
+
+.maps iframe {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* FORM KONTAK */
+.form-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-kontak textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-kontak button {
+    background-color: #ff7043;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-kontak button:hover {
+    background-color: #e85c2a;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #ff7043;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* === RESPONSIF TABLET === */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    aside {
+        width: 90%;
+    }
+
+    .produk-container {
+        justify-content: center;
+    }
+
+    .kontak {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+/* === RESPONSIF MOBILE === */
+@media (max-width: 600px) {
+    aside {
+        width: 80%;
+    }
+
+    .kontak {
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
